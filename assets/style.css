@@ -3,36 +3,65 @@ body {
   font-family: 'Inter', sans-serif;
   background: #ffffff;
   color: #1a1a1a;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .hero {
-  text-align: center;
-  padding: 80px 20px;
   background: #123f5a;
-  color: #ffffff;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-icon {
+  width: 90px;
+  margin-bottom: 30px;
+  opacity: 0.9;
 }
 
 .logo {
-  width: 260px;
-  margin-bottom: 20px;
+  width: 280px;
+  margin-bottom: 25px;
 }
 
-h1 {
+.hero h1 {
   font-weight: 500;
-  font-size: 28px;
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
-h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
-  color: #123f5a;
+.hero p {
+  font-weight: 300;
+  font-size: 18px;
+  opacity: 0.9;
 }
 
 section {
   padding: 80px 20px;
   max-width: 900px;
   margin: auto;
+}
+
+h2 {
+  color: #123f5a;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  font-size: 20px;
+  font-weight: 500;
+  color: #123f5a;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.live-status {
+  margin-top: 20px;
+  font-weight: 500;
+  color: #123f5a;
 }
 
 .buttons {
@@ -42,30 +71,53 @@ section {
 .btn-primary {
   background: #9fb3a8;
   color: #123f5a;
-  padding: 12px 24px;
+  padding: 12px 28px;
   text-decoration: none;
   margin: 5px;
   display: inline-block;
   border-radius: 4px;
+  font-weight: 500;
 }
 
 .btn-secondary {
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  padding: 12px 24px;
+  border: 1px solid white;
+  color: white;
+  padding: 12px 28px;
   text-decoration: none;
   margin: 5px;
   display: inline-block;
   border-radius: 4px;
 }
 
-ul {
-  padding-left: 20px;
-}
-
 footer {
+  background: #f4f4f4;
   text-align: center;
   padding: 40px;
-  background: #f4f4f4;
   font-size: 14px;
+  color: #666;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 70px 20px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 220px;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
 }

@@ -8,6 +8,45 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+.lang-switch {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.lang-switch a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.lang-switch a:hover {
+    opacity: 1;
+}
+
+.lang-switch a.active {
+    font-weight: 700;
+    opacity: 1;
+}
+
+.lang-switch span {
+    margin: 0 6px;
+    opacity: 0.5;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .lang-switch {
+        right: 20px;
+        top: 20px;
+    }
+}
+
+    
 :root {
     --azul-principal: #0e3a52;
     --blanco: #ffffff;

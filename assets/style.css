@@ -72,15 +72,10 @@ a {
   align-items: center;
 }
 
-.brand {
-  gap: 10px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
 .brand img {
-  width: 34px;
-  height: 34px;
+  width: 154px;
+  height: auto;
+  display: block;
 }
 
 .nav-links {
@@ -106,22 +101,13 @@ a {
   text-align: center;
 }
 
-.hero-mark {
-  display: inline-flex;
-  align-items: center;
-  gap: 18px;
+.hero-logo {
+  display: block;
+  width: min(300px, 70vw);
+  height: auto;
   margin-bottom: 26px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(1.55rem, 4vw, 2.35rem);
-  font-weight: 600;
-  line-height: 1.02;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.hero-mark img {
-  width: 78px;
-  height: 78px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .eyebrow,
@@ -352,8 +338,13 @@ address a:hover {
 @media (max-width: 680px) {
   .topbar {
     align-items: flex-start;
-    gap: 18px;
+    gap: 14px;
     flex-direction: column;
+    padding: 16px 0;
+  }
+
+  .brand img {
+    width: 132px;
   }
 
   .nav-links {
@@ -368,26 +359,32 @@ address a:hover {
   }
 
   .hero-content {
-    padding: 34px 0 68px;
+    padding: 22px 0 52px;
   }
 
-  .hero-mark {
-    margin-bottom: 30px;
-    gap: 14px;
+  .hero-logo {
+    width: min(220px, 70vw);
+    margin-bottom: 22px;
   }
 
-  .hero-mark img {
-    width: 58px;
-    height: 58px;
+  .hero h1 {
+    font-size: 1.78rem;
+    line-height: 1.12;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    margin-bottom: 24px;
+    font-size: 0.96rem;
   }
 
   .buttons {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: stretch;
+  }
+
+  .buttons .btn-primary {
+    grid-column: 1 / -1;
   }
 
   section {

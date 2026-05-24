@@ -57,7 +57,7 @@
         "lat":  -0.156213,
         "lng":  -78.500883,
         "status":  "active",
-        "visible":  true
+        "visible":  false
     },
     {
         "name":  "Mountain Lab",
@@ -199,5 +199,16 @@
         "status":  "planned",
         "visible":  true,
         "url":  "https://fablabs.io/labs/StartLabsUPS"
+    },
+    {
+        "name":  "FabLab ZOI",
+        "slug":  "fablabzoi",
+        "city":  "Quito",
+        "province":  "Pichincha",
+        "lat":  -0.16279,
+        "lng":  -78.4784,
+        "status":  "active",
+        "visible":  true,
+        "url":  "https://fablabs.io/labs/fablabzoi"
     }
 ]

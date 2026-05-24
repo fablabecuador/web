@@ -10,13 +10,15 @@ const countElement = document.getElementById("labs-count");
 const filterButtons = document.querySelectorAll(".map-filter");
 
 const loadLabs = async () => {
-  const response = await fetch("assets/labs.json");
+  const response = await fetch("assets/labs.json", { cache: "no-store" });
   if (!response.ok) {
     throw new Error("No se pudo cargar la lista de laboratorios.");
   }
 
   return response.json();
 };
+
+const isVisibleLab = (lab) => lab.visible !== false && Number.isFinite(lab.lat) && Number.isFinite(lab.lng);
 
 const labLocation = (lab) => [lab.lat, lab.lng];
 
@@ -106,7 +108,7 @@ const createMap = (labs) => {
 
 if (mapElement && window.L) {
   loadLabs()
-    .then(createMap)
+    .then((labs) => createMap(labs.filter(isVisibleLab)))
     .catch(() => {
       mapElement.innerHTML = "<p class=\"map-error\">No se pudo cargar el mapa de laboratorios.</p>";
     });

@@ -1,218 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manifiesto | Red FabLab Ecuador</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-.lang-switch {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-
-.lang-switch a {
-    color: var(--white);
-    text-decoration: none;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-}
-
-.lang-switch a:hover {
-    opacity: 1;
-}
-
-.lang-switch a.active {
-    font-weight: 700;
-    opacity: 1;
-}
-
-.lang-switch span {
-    margin: 0 6px;
-    opacity: 0.5;
-}
-
-/* Responsive adjustment */
-@media (max-width: 768px) {
-    .lang-switch {
-        right: 20px;
-        top: 20px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manifiesto | Red FabLab Ecuador</title>
+  <meta name="description" content="Manifiesto vivo de la Red FabLab Ecuador, articulado desde 2016.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/isotipo.png">
+  <style>
+    :root {
+      --blue: #0e3a52;
+      --blue-dark: #09283a;
+      --white: #ffffff;
+      --soft: #dfe8ea;
+      --green: #a9bea5;
     }
-}
 
-    
-:root {
-    --azul-principal: #0e3a52;
-    --blanco: #ffffff;
-    --gris-suave: #dfe6ea;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--azul-principal);
-    color: var(--blanco);
-    line-height: 1.8;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.logo {
-    width: 220px;
-    margin-bottom: 60px;
-}
-
-h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.subtitle {
-    font-weight: 300;
-    margin-bottom: 60px;
-    color: var(--gris-suave);
-}
-
-section {
-    margin-bottom: 60px;
-    text-align: left;
-}
-
-section p {
-    margin-bottom: 22px;
-    font-weight: 300;
-    font-size: 1.05rem;
-}
-
-.highlight {
-    font-weight: 600;
-}
-
-.final {
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-top: 60px;
-}
-
-.button-container {
-    margin-top: 80px;
-    text-align: center;
-}
-
-.button {
-    display: inline-block;
-    padding: 14px 28px;
-    border: 2px solid var(--blanco);
-    color: var(--blanco);
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 40px;
-    transition: all 0.3s ease;
-}
-
-.button:hover {
-    background-color: var(--blanco);
-    color: var(--azul-principal);
-}
-
-/* Responsive */
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(9, 40, 58, 0.98), rgba(14, 58, 82, 0.94)),
+        var(--blue);
+      color: var(--white);
+      line-height: 1.8;
     }
 
     .container {
-        padding: 60px 20px;
+      width: min(900px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 84px;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 52px;
+      font-size: 0.9rem;
+    }
+
+    .lang-switch a {
+      color: var(--white);
+      text-decoration: none;
+      opacity: 0.62;
+    }
+
+    .lang-switch a.active,
+    .lang-switch a:hover {
+      opacity: 1;
+      font-weight: 700;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .manifesto-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 46px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(1.45rem, 4vw, 2.1rem);
+      font-weight: 600;
+      line-height: 1.02;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    .manifesto-brand img {
+      width: 72px;
+      height: 72px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.15rem, 7vw, 4.1rem);
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--soft);
+      font-weight: 300;
     }
 
     section {
-        text-align: left;
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     }
-}
-</style>
+
+    section p {
+      margin: 0 0 22px;
+      font-size: 1.06rem;
+      font-weight: 300;
+    }
+
+    .highlight {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .final {
+      margin-top: 64px;
+      text-align: center;
+      font-size: clamp(1.25rem, 4vw, 1.7rem);
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    .button-container {
+      margin-top: 64px;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.76);
+      border-radius: 6px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--white);
+      color: var(--blue);
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
-
 <body>
+  <main class="container">
+    <div class="lang-switch" aria-label="Selector de idioma">
+      <a href="manifiesto.html" class="active">ES</a>
+      <span>|</span>
+      <a href="manifesto-en.html">EN</a>
+    </div>
 
-<div class="container">
+    <header class="intro">
+      <div class="manifesto-brand" aria-label="FabLab Ecuador">
+        <img src="assets/isotipo.png" alt="" aria-hidden="true">
+        <span>FabLab<br>Ecuador</span>
+      </div>
+      <h1>Manifiesto de la Red FabLab Ecuador</h1>
+      <p class="subtitle">Documento Vivo &middot; Desde 2016</p>
+    </header>
 
-<div class="lang-switch">
-    <a href="manifiesto.html" class="active">ES</a>
-    <span>|</span>
-    <a href="manifesto-en.html">EN</a>
-</div>
+    <section>
+      <p>
+        En 2016, durante el encuentro <span class="highlight">FabAtom</span> realizado en Conquito, la Red FabLab Ecuador consolid&oacute; su primer manifiesto. No fue un evento exclusivo de laboratorios de fabricaci&oacute;n digital. Fue un espacio de articulaci&oacute;n amplia que reuni&oacute; universidades, emprendedores, dise&ntilde;adores, ingenieros, educadores, gestores p&uacute;blicos e investigadores del ecosistema productivo nacional.
+      </p>
+      <p>
+        Aquel momento marc&oacute; un punto de inflexi&oacute;n: dejamos de ser iniciativas aisladas para comenzar a pensarnos como red. Desde entonces, este manifiesto ha sido revisado y actualizado en nuestras reuniones anuales, adapt&aacute;ndose a nuevas tecnolog&iacute;as, nuevas capacidades y nuevos desaf&iacute;os.
+      </p>
+    </section>
 
-<img src="logo-horizontal.png" alt="FabLab Ecuador" class="logo">
+    <section>
+      <p>
+        La Red FabLab Ecuador es una articulaci&oacute;n nacional de laboratorios, academia, industria, comunidad e instituciones p&uacute;blicas que creen en el poder de hacer para transformar. Somos parte de la red global de Fab Labs y compartimos est&aacute;ndares internacionales, pero nuestra aspiraci&oacute;n es m&aacute;s ambiciosa: <span class="highlight">contribuir y liderar desde el territorio.</span>
+      </p>
+      <p>
+        Creemos que la tecnolog&iacute;a es infraestructura de equidad. Que aprender haciendo es una estrategia pa&iacute;s. Que fabricar localmente fortalece soberan&iacute;a tecnol&oacute;gica. Que documentar y compartir conocimiento acelera el desarrollo colectivo.
+      </p>
+    </section>
 
-<h1>Manifiesto de la Red FabLab Ecuador</h1>
-<p class="subtitle">Documento Vivo · Desde 2016</p>
+    <section>
+      <p>
+        Asumimos el compromiso de avanzar hacia una <span class="highlight">estandarizaci&oacute;n progresiva de procesos f&iacute;sicos y digitales</span> que permita mayor compatibilidad entre laboratorios, mayor trazabilidad productiva y mayor interoperabilidad entre plataformas, m&aacute;quinas y metodolog&iacute;as.
+      </p>
+      <p>
+        Estandarizar no significa limitar la creatividad. Significa crear un lenguaje com&uacute;n. Significa que un dise&ntilde;o desarrollado en un nodo pueda fabricarse en otro sin fricci&oacute;n. Significa que los flujos digitales se traduzcan con precisi&oacute;n en objetos f&iacute;sicos. Significa que la producci&oacute;n distribuida sea t&eacute;cnicamente viable, econ&oacute;micamente sostenible y globalmente competitiva.
+      </p>
+    </section>
 
-<section>
-<p>
-En 2016, durante el encuentro <span class="highlight">FabAtom</span> realizado en Conquito, la Red FabLab Ecuador consolidó su primer manifiesto. No fue un evento exclusivo de laboratorios de fabricación digital. Fue un espacio de articulación amplia que reunió universidades, emprendedores, diseñadores, ingenieros, educadores, gestores públicos e investigadores del ecosistema productivo nacional.
-</p>
+    <section>
+      <p>
+        Nuestro horizonte es claro: <span class="highlight">consolidar al Ecuador como referente mundial en fabricaci&oacute;n digital, educaci&oacute;n tecnol&oacute;gica avanzada y producci&oacute;n distribuida estandarizada.</span> Queremos que el pa&iacute;s no solo consuma tecnolog&iacute;a, sino que dise&ntilde;e sistemas. No solo fabrique objetos, sino que exporte metodolog&iacute;as.
+      </p>
+    </section>
 
-<p>
-Aquel momento marcó un punto de inflexión: dejamos de ser iniciativas aisladas para comenzar a pensarnos como red. Desde entonces, este manifiesto ha sido revisado y actualizado en nuestras reuniones anuales, adaptándose a nuevas tecnologías, nuevas capacidades y nuevos desafíos.
-</p>
-</section>
+    <div class="final">
+      No somos solo espacios de m&aacute;quinas.<br>
+      Somos infraestructura de futuro.<br>
+      Somos la Red FabLab Ecuador.
+    </div>
 
-<section>
-<p>
-La Red FabLab Ecuador es una articulación nacional de laboratorios, academia, industria, comunidad e instituciones públicas que creen en el poder de hacer para transformar. Somos parte de la red global de Fab Labs y compartimos estándares internacionales, pero nuestra aspiración es más ambiciosa: <span class="highlight">contribuir y liderar desde el territorio.</span>
-</p>
-
-<p>
-Creemos que la tecnología es infraestructura de equidad. Que aprender haciendo es una estrategia país. Que fabricar localmente fortalece soberanía tecnológica. Que documentar y compartir conocimiento acelera el desarrollo colectivo.
-</p>
-</section>
-
-<section>
-<p>
-Asumimos el compromiso de avanzar hacia una <span class="highlight">estandarización progresiva de procesos físicos y digitales</span> que permita mayor compatibilidad entre laboratorios, mayor trazabilidad productiva y mayor interoperabilidad entre plataformas, máquinas y metodologías.
-</p>
-
-<p>
-Estandarizar no significa limitar la creatividad. Significa crear un lenguaje común. Significa que un diseño desarrollado en un nodo pueda fabricarse en otro sin fricción. Significa que los flujos digitales se traduzcan con precisión en objetos físicos. Significa que la producción distribuida sea técnicamente viable, económicamente sostenible y globalmente competitiva.
-</p>
-</section>
-
-<section>
-<p>
-Nuestro horizonte es claro: <span class="highlight">consolidar al Ecuador como referente mundial en fabricación digital, educación tecnológica avanzada y producción distribuida estandarizada.</span> Queremos que el país no solo consuma tecnología, sino que diseñe sistemas. No solo fabrique objetos, sino que exporte metodologías.
-</p>
-</section>
-
-<div class="final">
-No somos solo espacios de máquinas.<br>
-Somos infraestructura de futuro.<br>
-Somos la Red FabLab Ecuador.
-</div>
-
-<div class="button-container">
-<a href="index.html" class="button">← Volver al Inicio</a>
-</div>
-
-</div>
-
+    <div class="button-container">
+      <a href="index.html" class="button">Volver al Inicio</a>
+    </div>
+  </main>
 </body>
 </html>

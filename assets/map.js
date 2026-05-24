@@ -26,6 +26,11 @@ const labUrl = (lab) => lab.url || `https://www.fablabs.io/labs/${lab.slug}`;
 
 const labLinkLabel = (lab) => lab.linkLabel || (lab.url ? "Ver sede UPS" : "Ver en FabLabs.io");
 
+const ecuadorBounds = L.latLngBounds([
+  [-5.25, -81.4],
+  [1.65, -75.05]
+]);
+
 const createMap = (labs) => {
   const map = L.map(mapElement, {
     scrollWheelZoom: false,
@@ -61,7 +66,7 @@ const createMap = (labs) => {
     bounds.extend(labLocation(lab));
   });
 
-  map.fitBounds(bounds, { padding: [26, 26] });
+  map.fitBounds(ecuadorBounds, { padding: [18, 18] });
 
   const renderLabs = (filter = "all") => {
     const visibleLabs = labs.filter((lab) => filter === "all" || lab.status === filter);
@@ -80,7 +85,9 @@ const createMap = (labs) => {
       </button>
     `).join("");
 
-    if (visibleLabs.length) {
+    if (filter === "all") {
+      map.fitBounds(ecuadorBounds, { padding: [18, 18] });
+    } else if (visibleLabs.length) {
       map.fitBounds(L.latLngBounds(visibleLabs.map(labLocation)), { padding: [26, 26] });
     }
   };

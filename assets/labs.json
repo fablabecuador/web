@@ -180,7 +180,7 @@
         "visible":  false
     },
     {
-        "name":  "Industrial FABLab UCUENCA",
+        "name":  "Industrial FabLab UCuenca",
         "slug":  "ucuenca",
         "city":  "Cuenca",
         "province":  "Azuay",
@@ -196,7 +196,7 @@
         "province":  "Pichincha",
         "lat":  -0.2823285,
         "lng":  -78.5506842,
-        "status":  "planned",
+        "status":  "active",
         "visible":  true,
         "url":  "https://fablabs.io/labs/StartLabsUPS"
     },
@@ -218,7 +218,7 @@
         "province":  "Pichincha",
         "lat":  -0.20811,
         "lng":  -78.48788,
-        "status":  "registered",
+        "status":  "active",
         "visible":  true,
         "url":  "https://www.ups.edu.ec/sede-quito",
         "kind":  "sede"
@@ -230,7 +230,7 @@
         "province":  "Guayas",
         "lat":  -2.22011,
         "lng":  -79.88663,
-        "status":  "registered",
+        "status":  "active",
         "visible":  true,
         "url":  "https://www.ups.edu.ec/sede-guayaquil",
         "kind":  "sede"

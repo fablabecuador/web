@@ -210,5 +210,29 @@
         "status":  "active",
         "visible":  true,
         "url":  "https://fablabs.io/labs/fablabzoi"
+    },
+    {
+        "name":  "UPS Sede Quito - Campus El Girón",
+        "slug":  "ups-quito-el-giron",
+        "city":  "Quito",
+        "province":  "Pichincha",
+        "lat":  -0.20811,
+        "lng":  -78.48788,
+        "status":  "registered",
+        "visible":  true,
+        "url":  "https://www.ups.edu.ec/sede-quito",
+        "kind":  "sede"
+    },
+    {
+        "name":  "UPS Sede Guayaquil - Campus Centenario",
+        "slug":  "ups-guayaquil-centenario",
+        "city":  "Guayaquil",
+        "province":  "Guayas",
+        "lat":  -2.22011,
+        "lng":  -79.88663,
+        "status":  "registered",
+        "visible":  true,
+        "url":  "https://www.ups.edu.ec/sede-guayaquil",
+        "kind":  "sede"
     }
 ]

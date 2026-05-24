@@ -24,6 +24,8 @@ const labLocation = (lab) => [lab.lat, lab.lng];
 
 const labUrl = (lab) => lab.url || `https://www.fablabs.io/labs/${lab.slug}`;
 
+const labLinkLabel = (lab) => lab.linkLabel || (lab.url ? "Ver sede UPS" : "Ver en FabLabs.io");
+
 const createMap = (labs) => {
   const map = L.map(mapElement, {
     scrollWheelZoom: false,
@@ -52,7 +54,7 @@ const createMap = (labs) => {
         <strong>${lab.name}</strong>
         <span>${lab.city}, ${lab.province}</span>
         <em>${statusLabels[lab.status]}</em>
-        <a href="${labUrl(lab)}" target="_blank" rel="noopener noreferrer">Ver en FabLabs.io</a>
+        <a href="${labUrl(lab)}" target="_blank" rel="noopener noreferrer">${labLinkLabel(lab)}</a>
       `);
 
     markers.set(lab.slug, marker);

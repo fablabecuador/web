@@ -196,6 +196,226 @@ section {
   align-items: start;
 }
 
+.map-section {
+  padding-bottom: 44px;
+}
+
+.map-heading {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+.map-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  min-height: 590px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 24px 60px rgba(18, 63, 90, 0.12);
+}
+
+.map-panel {
+  position: relative;
+  min-height: 590px;
+}
+
+#labs-map {
+  width: 100%;
+  height: 100%;
+  min-height: 590px;
+  background: #dbe5e8;
+}
+
+.map-controls {
+  position: absolute;
+  z-index: 500;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  border: 1px solid rgba(219, 229, 232, 0.85);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 32px rgba(18, 63, 90, 0.14);
+}
+
+.map-filter {
+  min-height: 36px;
+  padding: 8px 13px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--blue);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.map-filter.active,
+.map-filter:hover {
+  background: var(--blue);
+  color: white;
+}
+
+.labs-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-left: 1px solid var(--line);
+  background: #fbfdfc;
+}
+
+.labs-summary {
+  padding: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.labs-summary span {
+  display: block;
+  color: var(--blue);
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.labs-summary p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.labs-list {
+  display: grid;
+  max-height: 494px;
+  overflow: auto;
+}
+
+.lab-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 78px;
+  padding: 16px 20px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lab-item:hover {
+  background: var(--soft);
+}
+
+.lab-item strong,
+.lab-item small {
+  display: block;
+}
+
+.lab-item strong {
+  color: var(--blue);
+  font-size: 0.96rem;
+  line-height: 1.25;
+}
+
+.lab-item small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.lab-status {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: var(--line);
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.lab-status-active {
+  background: rgba(21, 127, 143, 0.12);
+  color: var(--teal);
+}
+
+.lab-status-planned {
+  background: rgba(169, 190, 165, 0.3);
+  color: #5d735b;
+}
+
+.lab-marker {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(18, 63, 90, 0.18);
+}
+
+.lab-marker span {
+  width: 16px;
+  height: 16px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 8px 24px rgba(18, 63, 90, 0.3);
+}
+
+.lab-marker-active span {
+  background: var(--teal);
+}
+
+.lab-marker-planned span {
+  background: #7e936d;
+}
+
+.leaflet-popup-content {
+  margin: 14px 16px;
+  min-width: 180px;
+}
+
+.leaflet-popup-content strong,
+.leaflet-popup-content span,
+.leaflet-popup-content em,
+.leaflet-popup-content a {
+  display: block;
+}
+
+.leaflet-popup-content strong {
+  color: var(--blue);
+  line-height: 1.25;
+}
+
+.leaflet-popup-content span {
+  margin-top: 5px;
+  color: var(--muted);
+}
+
+.leaflet-popup-content em {
+  margin-top: 8px;
+  color: var(--teal);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.leaflet-popup-content a {
+  margin-top: 10px;
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
 h2 {
   margin: 0;
   color: var(--blue);
@@ -329,9 +549,23 @@ address a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .split {
+  .split,
+  .map-heading {
     grid-template-columns: 1fr;
     gap: 26px;
+  }
+
+  .map-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .labs-panel {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .labs-list {
+    max-height: 360px;
   }
 }
 
@@ -389,6 +623,25 @@ address a:hover {
 
   section {
     padding: 64px 0;
+  }
+
+  .map-shell,
+  .map-panel,
+  #labs-map {
+    min-height: 470px;
+  }
+
+  .map-controls {
+    right: 12px;
+    left: 12px;
+    top: 12px;
+    justify-content: space-between;
+  }
+
+  .map-filter {
+    flex: 1;
+    padding: 8px 7px;
+    font-size: 0.8rem;
   }
 
   .criteria-grid {

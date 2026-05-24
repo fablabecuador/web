@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="assets/isotipo.png">
@@ -96,11 +97,46 @@
       </div>
     </section>
 
-    <section id="red">
+    <section id="red" class="map-section">
+      <div class="container">
+        <div class="map-heading">
+          <div>
+            <p class="section-kicker">Nodos</p>
+            <h2>Red de Laboratorios</h2>
+          </div>
+          <div class="section-copy">
+            <p>
+              Mapa de laboratorios Fab Lab registrados en Ecuador, con datos base de FabLabs.io y puntos editables para la red local.
+            </p>
+          </div>
+        </div>
+
+        <div class="map-shell">
+          <div class="map-panel">
+            <div class="map-controls" aria-label="Filtros del mapa">
+              <button type="button" class="map-filter active" data-filter="all">Todos</button>
+              <button type="button" class="map-filter" data-filter="active">Activos</button>
+              <button type="button" class="map-filter" data-filter="planned">Planificados</button>
+            </div>
+            <div id="labs-map" aria-label="Mapa de laboratorios FabLab en Ecuador"></div>
+          </div>
+
+          <aside class="labs-panel" aria-label="Lista de laboratorios">
+            <div class="labs-summary">
+              <span id="labs-count">19</span>
+              <p>laboratorios con ubicaci&oacute;n en el mapa</p>
+            </div>
+            <div id="labs-list" class="labs-list"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="red-copy">
       <div class="container split">
         <div>
           <p class="section-kicker">Nodos</p>
-          <h2>Red de Laboratorios</h2>
+          <h2>Una red distribuida</h2>
         </div>
         <div class="section-copy">
           <p>
@@ -153,5 +189,7 @@
       </address>
     </div>
   </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/map.js"></script>
 </body>
 </html>

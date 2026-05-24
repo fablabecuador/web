@@ -187,7 +187,9 @@
         "lat":  -2.902334,
         "lng":  -79.005153,
         "status":  "active",
-        "visible":  true
+        "visible":  true,
+        "url":  "https://www.ucuenca.edu.ec/noticias/clein-2025-impulsa-innovacion-y-aprendizaje-en-ingenieria-industrial/",
+        "linkLabel":  "Ver sitio UCuenca"
     },
     {
         "name":  "StartLabs - UPS",
@@ -198,7 +200,8 @@
         "lng":  -78.5506842,
         "status":  "active",
         "visible":  true,
-        "url":  "https://fablabs.io/labs/StartLabsUPS"
+        "url":  "https://coworking.ups.edu.ec/startlabs",
+        "linkLabel":  "Ver StartLabs"
     },
     {
         "name":  "FabLab ZOI",
@@ -209,7 +212,7 @@
         "lng":  -78.4784,
         "status":  "active",
         "visible":  true,
-        "url":  "https://fablabs.io/labs/fablabzoi",
+        "url":  "https://www.zoi.ec/",
         "linkLabel":  "Ver sede ZOI"
     },
     {
@@ -222,6 +225,7 @@
         "status":  "active",
         "visible":  true,
         "url":  "https://www.ups.edu.ec/sede-quito",
+        "linkLabel":  "Ver sede UPS",
         "kind":  "sede"
     },
     {
@@ -234,6 +238,7 @@
         "status":  "active",
         "visible":  true,
         "url":  "https://www.ups.edu.ec/sede-guayaquil",
+        "linkLabel":  "Ver sede UPS",
         "kind":  "sede"
     }
 ]

@@ -24,7 +24,7 @@ const labLocation = (lab) => [lab.lat, lab.lng];
 
 const labUrl = (lab) => lab.url || `https://www.fablabs.io/labs/${lab.slug}`;
 
-const labLinkLabel = (lab) => lab.linkLabel || (lab.url ? "Ver sede UPS" : "Ver en FabLabs.io");
+const labLinkLabel = (lab) => lab.linkLabel || (lab.url ? "Ver informacion" : "Ver en FabLabs.io");
 
 const ecuadorBounds = L.latLngBounds([
   [-5.25, -81.4],

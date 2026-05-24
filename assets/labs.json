@@ -209,7 +209,8 @@
         "lng":  -78.4784,
         "status":  "active",
         "visible":  true,
-        "url":  "https://fablabs.io/labs/fablabzoi"
+        "url":  "https://fablabs.io/labs/fablabzoi",
+        "linkLabel":  "Ver sede ZOI"
     },
     {
         "name":  "UPS Sede Quito - Campus El Girón",
